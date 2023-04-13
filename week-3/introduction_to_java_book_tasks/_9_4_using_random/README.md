@@ -1,12 +1,8 @@
-# 9.2 Stock Task
+# 9.4 Random Task
 > to run app: **mvn compile exec:java**
 
 ## Application Description:
 ![app description](images/app_description.png)
-
-## App UML
-### Class Diagram
-![class diagram](images/Stock_UML.png)
 
 ## the Output
 ![Output](images/output.png)
