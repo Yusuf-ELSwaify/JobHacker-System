@@ -1,3 +1,5 @@
+package reverse_task;
+
 public class Solution {
 
   public static String reverseString(String s) {
@@ -12,8 +14,8 @@ public class Solution {
   }
 
   public static void main(String[] args) {
-    System.out.println(reverseString("aaabbb"));
+    System.out.println("The reverse of \"aaabbb\" is: " + reverseString("aaabbb"));
     System.out.println("______________________");
-    System.out.println(reverseString("aabbb"));
+    System.out.println("The reverse of \"aabbb\" is: " + reverseString("aabbb"));
   }
 }

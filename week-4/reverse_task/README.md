@@ -1,6 +1,6 @@
 # String Reverse Task
 >
-> To run app: **"java Solution"**
+> To run app: **"java Solution.java"**
 
 ## Technologies Used
 
