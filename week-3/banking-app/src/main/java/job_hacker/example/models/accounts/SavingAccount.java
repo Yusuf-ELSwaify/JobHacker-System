@@ -24,8 +24,8 @@ public class SavingAccount extends Account{
     @Override
     public String toString() {
         return "SavingAccount{" +
-                "interestRate=" + interestRate +
-                ", accountNumber=" + accountNumber +
+                "accountNumber=" + accountNumber +
+                ", interestRate=" + interestRate +
                 ", holderName='" + holderName + '\'' +
                 ", balance=" + balance +
                 '}';

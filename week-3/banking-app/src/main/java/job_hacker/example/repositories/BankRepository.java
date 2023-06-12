@@ -4,6 +4,7 @@ import job_hacker.example.models.accounts.Account;
 import job_hacker.example.models.accounts.SavingAccount;
 
 import java.util.LinkedList;
+import java.util.Optional;
 
 public class BankRepository {
     LinkedList<Account> accounts = new LinkedList<>();
@@ -29,7 +30,16 @@ public class BankRepository {
     public double withdraw(Account account, double money) {
         return account.withdraw(money);
     }
+    @Deprecated
     public void displayAccountDetails(Account account) {
         System.out.println(account);
+    }
+    public void displayAllAccountsDetails() {
+        System.out.println(accounts);
+    }
+    public Optional<Account> getAccount(int accountNumber){
+        return accounts.stream()
+                .filter(account -> account.getAccountNumber() == accountNumber)
+                .findFirst();
     }
 }

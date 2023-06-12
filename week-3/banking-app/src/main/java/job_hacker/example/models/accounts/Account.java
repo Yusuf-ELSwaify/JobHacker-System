@@ -16,10 +16,18 @@ public class Account {
     }
 
     public double deposit(double deposit) {
+        if (deposit < 0)
+            throw new ArithmeticException("Can't deposit a negative number");
         balance += deposit;
         return balance;
     }
     public double withdraw(double money) {
+        if (money < 0)
+            throw new ArithmeticException("Can't withdraw a negative number");
+        if (money > balance)
+            throw new ArithmeticException("Your current balance is: " + balance
+                    + " can't withdraw: " + money);
+
         balance -= money;
         return balance;
     }
