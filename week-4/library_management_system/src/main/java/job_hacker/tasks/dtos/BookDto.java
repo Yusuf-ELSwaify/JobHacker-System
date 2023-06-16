@@ -3,21 +3,21 @@ package job_hacker.tasks.dtos;
 import job_hacker.tasks.models.enums.AvailabilityStatus;
 
 public class BookDto {
-    private int ID;
-    private String title;
-    private String authorName;
-    private int version;
-    private AvailabilityStatus availabilityStatus;
+    private final String ID;
+    private final String title;
+    private final String authorName;
+    private final int version;
+    private final AvailabilityStatus availabilityStatus;
     
-    public BookDto(int iD, String title, String authorName, int version, AvailabilityStatus availabilityStatus) {
-        ID = iD;
+    public BookDto(String ID, String title, String authorName, int version, AvailabilityStatus availabilityStatus) {
+        this.ID = ID;
         this.title = title;
         this.authorName = authorName;
         this.version = version;
         this.availabilityStatus = availabilityStatus;
     }
     
-    public int getID() {
+    public String getID() {
         return ID;
     }
 

@@ -14,7 +14,7 @@ public class LibraryService {
     LibraryRepository libraryRepository = LibraryRepository.getInstance();
     BookRepository bookRepository = BookRepository.getInstance();
     BookMapper bookMapper = new BookMapper();
-    public BookDto getBook(int bookId) throws InvalidBookIDException {
+    public BookDto getBook(String bookId) throws InvalidBookIDException {
         Book book = libraryRepository.getBookById(bookId);
         return bookMapper.toDto(book);
     }
@@ -23,15 +23,15 @@ public class LibraryService {
         return bookMapper.toDto(book);
     }
 
-    public void removeBook(int bookId) throws InvalidBookIDException {
+    public void removeBook(String bookId) throws InvalidBookIDException {
         libraryRepository.removeBook(bookId);
     }
     
-    public void checkoutBook(int bookId) throws UnAvailableBookException, InvalidBookIDException{
+    public void checkoutBook(String bookId) throws UnAvailableBookException, InvalidBookIDException{
         bookRepository.checkoutBook(libraryRepository.getBookById(bookId));
     }
     
-    public void returnBook(int bookId) throws InvalidBookIDException{
+    public void returnBook(String bookId) throws InvalidBookIDException{
         bookRepository.returnBook(libraryRepository.getBookById(bookId));
     }
     

@@ -23,9 +23,9 @@ public class LibraryRepository {
         return library.getBooks();
     }
 
-    public Book getBookById(int bookId) throws InvalidBookIDException {
+    public Book getBookById(String bookId) throws InvalidBookIDException {
         Optional<Book> result = library.getBooks().stream()
-                .filter(book -> book.getID() == bookId)
+                .filter(book -> book.getID().equals(bookId))
                 .findFirst();
         if (result.isEmpty())
             throw new InvalidBookIDException(bookId);
@@ -43,7 +43,7 @@ public class LibraryRepository {
     public void removeBook(Book book) {
         library.removeBook(book);
     }
-    public void removeBook(int bookId) throws InvalidBookIDException {
+    public void removeBook(String bookId) throws InvalidBookIDException {
         removeBook(getBookById(bookId));
     }
 

@@ -5,21 +5,20 @@ import job_hacker.tasks.models.enums.AvailabilityStatus;
 
 public class Book {
     private static int currentID = 0;
-    private int ID;
+    private String ID;
     private String title;
     private String authorName;
     private int version;
     private AvailabilityStatus availabilityStatus;
     
     public Book(String title, String authorName, int version) {
-        ++currentID;
-        ID = currentID;
+        ID = String.valueOf(++currentID);
         this.title = title;
         this.authorName = authorName;
         this.version = version;
         this.availabilityStatus = AvailabilityStatus.AVAILABLE;
     }
-    public int getID() {
+    public String getID() {
         return ID;
     }
     public String getTitle() {
@@ -57,5 +56,4 @@ public class Book {
             ", status ? "+ availabilityStatus
             +" }";
     }
-
 }

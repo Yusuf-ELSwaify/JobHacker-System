@@ -48,12 +48,10 @@ public class App
         libraryService.getBorrowedBooks();
         System.out.println("_____________________________");
         libraryService.checkoutBook(secondBook.getID());
-        System.out.println("checked out: "+ secondBook);
         libraryService.getAvailableBooks();
         libraryService.getBorrowedBooks();
         System.out.println("_____________________________");
         libraryService.returnBook(secondBook.getID());
-        System.out.println("returned: " + secondBook);
         libraryService.getAvailableBooks();
         libraryService.getBorrowedBooks();
         System.out.println("_____________________________");
