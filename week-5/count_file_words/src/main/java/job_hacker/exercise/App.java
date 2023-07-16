@@ -3,6 +3,7 @@ package job_hacker.exercise;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class App {
     private static final String FILE_NAME = "/Lincoln.txt";
@@ -12,7 +13,7 @@ public class App {
 
             try(Scanner scanner = new Scanner(file)) {
                 int wordCount = 0;
-
+                scanner.useDelimiter(Pattern.compile("\\W+"));
                 while (scanner.hasNext()) {
                     scanner.next();
                     wordCount++;
